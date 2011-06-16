@@ -17,7 +17,7 @@ console.log('Starting tests');
 // Check out http://www.hnsearch.com/api for search queries. Straightforward examples below
 var filter = {};
 filter['filter[fields][type][]'] = 'submission';
-hn.searchSubmission('facebook', function (err, body) {
+hn.searchSubmission('facebook', filter, function (err, body) {
 	if (err) {
 		throw 'ERROR!';
 		return this;

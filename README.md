@@ -12,20 +12,46 @@ You can install node-hnsearch from the github package. Dependencies:
 
 ## Getting started
 
-The wrapper is really barebones in its current state. This wrapper allows requests for users, comments and submissions. 
+The wrapper is really barebones in its current state. It allows requests for users, comments and submissions. 
 
 ### Setup wrapper
 
 var	hnsearch = require('hnsearch'),
 	hn = new hnsearch();
 
-### Search 
+### Search submission
 
 The following code shows a search for a submission with keyword 'facebook'
 
 	var filter = {};
 	filter['filter[fields][type][]'] = 'submission';
-	hn.searchSubmission('facebook', function (err, body) {
+	hn.searchSubmission('facebook', filter, function (err, body) {
+		if (err) {
+			throw 'ERROR!';
+			return this;
+		} else {
+			print(body);
+		}
+	});
+
+### Search comment
+
+The following code shows a search for a comment with keyword 'comment points'
+
+	var filter = {};
+	filter['filter[fields][type][]'] = 'comment';
+	hn.searchSubmission('comment points', filter, function (err, body) {
+		if (err) {
+			throw 'ERROR!';
+			return this;
+		} else {
+			print(body);
+		}
+	});
+
+The following code shows a search for a user with name 'pg'
+
+	hn.searchUser('pg', function (err, body) {
 		if (err) {
 			throw 'ERROR!';
 			return this;
