@@ -30,7 +30,7 @@ The following code shows a search for a submission with keyword 'facebook'
 			throw 'ERROR!';
 			return this;
 		} else {
-			print(body);
+			console.log(body);
 		}
 	});
 
@@ -45,7 +45,7 @@ The following code shows a search for a comment with keyword 'comment points'
 			throw 'ERROR!';
 			return this;
 		} else {
-			print(body);
+			console.log(body);
 		}
 	});
 
@@ -56,7 +56,7 @@ The following code shows a search for a user with name 'pg'
 			throw 'ERROR!';
 			return this;
 		} else {
-			print(body);
+			console.log(body);
 		}
 	});
 
