@@ -16,8 +16,8 @@ The wrapper is really barebones in its current state. It allows requests for use
 
 ### Setup wrapper
 
-var	hnsearch = require('hnsearch'),
-	hn = new hnsearch();
+	var	hnsearch = require('hnsearch'),
+		hn = new hnsearch();
 
 ### Search submission
 
